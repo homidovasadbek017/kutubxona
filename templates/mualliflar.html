@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mualliflar ro'yhati</title>
+</head>
+<h1>Mualliflar ro'yxati</h1>
+<a href="/">Bosh sahifa</a>
+<hr>
+<body>
+{%for muallif in mualliflar%}
+    <p>{{forloop.counter}}.
+        <a href="/mualliflar/{{muallif.id}}/">
+            {{muallif.name}}
+        </a>
+    </p>
+{% endfor %}
+</body>
+</html>

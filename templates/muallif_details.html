@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Muallif | {{ muallif.name }}</title>
+</head>
+<body>
+<h1>{{ muallif.name }} ma'lumotlari</h1>
+<a href="mualliflar/">Mualliflar ro'yxati</a>
+<hr>
+<p>Jins: {{ muallif.jinsi }}</p>
+<p>Tug'ilgan sana: {{ muallif.birth_date }}</p>
+<p>Kitoblar soni: {{ muallif.kitoblar_soni }}</p>
+<p>Tirik: {{ muallif.tirik }}</p>
+<hr>
+<h2>Kitoblari</h2>
+{% for kitob in muallif.kitob_set.all %}
+<p>{{ forloop.counter }}. {{kitob.name}}</p>
+{%endfor%}
+</body>
+</html>

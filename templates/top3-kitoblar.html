@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Top 3 sahifali kitoblar</title>
+</head>
+<body>
+{%for kitob in kitoblar%}
+<p>{{forloop.counter}}. {{kitob.name}} - {{kitob.sahifa}} sahifa</p>
+{%endfor%}
+</body>
+</html>
